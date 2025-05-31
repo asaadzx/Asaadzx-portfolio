@@ -10,7 +10,7 @@
   
 <a
     class={cn(
-      "group relative w-7xl h-12 sm:w-32 cursor-pointer overflow-hidden rounded-full border bg-background p-1.5 sm:p-2 text-center font-semibold",
+      "group relative w-11 h-12 sm:w-32 cursor-pointer overflow-hidden rounded-full border bg-background p-1.5 sm:p-2 text-center font-semibold",
       _class
     )}
     href={href}
