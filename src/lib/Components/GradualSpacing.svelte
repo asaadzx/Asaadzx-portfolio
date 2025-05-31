@@ -6,6 +6,7 @@
     export { className as class };
   
     export let words = "Gradual Spacing";
+    export let emojie = "👋";
     export let duration = 0.5;
     export let delayMultiple = 0.04;
     export let framerProps = {
@@ -37,7 +38,8 @@
             {/if}
           </span>
         </Motion>
-      {/each}
+        {/each}
+        <h1 class="text-3xl">{emojie}</h1>
     </AnimatePresence>
   </div>
   

@@ -56,7 +56,7 @@
             
             class="bg-black/10 dark:bg-white/5 p-3"
           >
-          <a href="https://github.com/asaadzx" aria-label="Home">
+          <a href="/" aria-label="Home">
             <i class="fa-solid fa-house text-xl"></i>
           </a>
           </DockIcon>
@@ -86,7 +86,9 @@
             {mouseX}
             class="bg-black/10 dark:bg-white/5 p-3"
           >
-          <i class="fa-solid fa-brands fa-twitter"></i>
+          <a href="https://edition.cnn.com/interactive/2019/06/us/dad-joke-generator-trnd/" aria-label="jokes">
+            <i class="fa-solid fa-face-laugh-wink text-xl"></i>
+          </a>
           </DockIcon>
         </Dock>
     </div>
@@ -96,6 +98,7 @@
         <GradualSpacing
             class="text-3xl tracking-[-0.1em] h-auto mb-16 text-black dark:text-white sm:text-4xl md:text-7xl md:leading-[5rem]"
             words="Hi There, I am Asaad Zein"
+            emojie="👋"
         />
 
         <div class="flex justify-center mx-auto space-x-10">
