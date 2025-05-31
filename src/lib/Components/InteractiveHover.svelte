@@ -26,7 +26,7 @@
     >
       <span class="hidden sm:relative">{text}</span>
       <i class={icon}></i>
-      <i class="fa-solid fa-arrow-right hidden sm:relative"></i>
+      <i class="fa-solid fa-arrow-right hidden relative w-0.5 sm:inline-block translate-x-1 transition-all duration-300"></i>
     </div>
     <div
       class="absolute left-[20%] top-[40%] h-2 w-7xl scale-[1] rounded-lg bg-primary transition-all duration-300 hidden sm:block group-hover:left-[0%] group-hover:top-[0%] group-hover:h-full group-hover:w-full group-hover:scale-[1.8] group-hover:bg-primary"

@@ -2,6 +2,7 @@
     import { cn } from "../utils.js";
     import { AnimatePresence, Motion } from "svelte-motion";
     import { onMount } from "svelte";
+    import gsap from "gsap";
   
     let className: any = "Gradual Spacing";
     export { className as class };
@@ -20,33 +21,40 @@
     let wordsspilit = words.split("");
     let isAnimating = false;
     let container: HTMLElement;
+    let emojiElement: HTMLElement;
+
+    function animateEmoji() {
+      if (emojiElement) {
+        gsap.to(emojiElement, {
+          rotation: 20,
+          duration: 0.9,
+          ease: "power1.inOut",
+          yoyo: true,
+          repeat: -1
+        });
+      }
+    }
 
     function handleTouchStart() {
       if (!isAnimating) {
-        isAnimating = true;
-        // First, clear the text with a fade out
-        wordsspilit = [];
+        isAnimating = false;
         
-        // Add a small delay before starting the new animation
         setTimeout(() => {
-          // Split the text and add some random initial positions for a more dynamic effect
           wordsspilit = words.split("");
           framerProps = {
             hidden: { 
               opacity: 0, 
-              x: Math.random() > 0.5 ? -30 : 30,
-              y: Math.random() > 0.5 ? -20 : 20,
+              x: 0,
+              y: 0,
               scale: 0.8
             },
             visible: { 
               opacity: 1, 
-              x: 0,
+              x: 12,
               y: 0,
               scale: 1,
               transition: {
                 type: "spring",
-                stiffness: 200,
-                damping: 15
               }
             }
           };
@@ -54,19 +62,15 @@
           // Reset the animation state after all characters have animated
           setTimeout(() => {
             isAnimating = false;
-            // Reset to default animation props
-            framerProps = {
-              hidden: { opacity: 0, x: -20, y: 0, scale: 1 },
-              visible: { opacity: 1, x: 0, y: 0, scale: 1 }
-            };
           }, duration * 1000 + wordsspilit.length * delayMultiple * 1000);
-        }, 100);
+        }, 10);
       }
     }
 
     onMount(() => {
       if (container) {
         container.addEventListener('touchstart', handleTouchStart);
+        animateEmoji();
         return () => {
           container.removeEventListener('touchstart', handleTouchStart);
         };
@@ -77,6 +81,7 @@
 <div 
   bind:this={container}
   class="flex justify-center space-x-[0.05rem] cursor-pointer touch-manipulation select-none max-w-fit mx-auto"
+  on:touchstart={handleTouchStart}
   on:keydown={(e) => e.key === 'Enter' && handleTouchStart()}
   role="button"
   tabindex="0"
@@ -103,7 +108,7 @@
         </span>
       </Motion>
     {/each}
-    <h1 class="text-lg w-2 sm:text-xl md:text-2xl">{emojie}</h1>
+    <h1 bind:this={emojiElement} class="text-lg w-2 sm:text-xl md:text-2xl inline-block">{emojie}</h1>
   </AnimatePresence>
 </div>
 
