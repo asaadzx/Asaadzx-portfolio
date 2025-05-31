@@ -11,6 +11,26 @@
 
     let links = [
         {
+            text: "Home",
+            icon_class: "fa-solid fa-house",
+            href: "/"
+        },
+        {
+            text: "About",
+            icon_class: "fa-solid fa-address-card",
+            href: "/about"
+        },
+        {
+            text: "Projects",
+            icon_class: "fa-solid fa-briefcase",
+            href: "/projects"
+        },
+        {
+            text: "Jokes",
+            icon_class: "fa-solid fa-face-laugh-wink",
+            href: "https://edition.cnn.com/interactive/2019/06/us/dad-joke-generator-trnd/"
+        },
+        {
             text: "Contact Me",
             icon_class: "fa-solid fa-envelope",
             href: "mailto:asaad.work2010@gmail.com"
@@ -32,6 +52,10 @@
         }
     ];
 
+    // Separate navigation and social links
+    let navLinks = links.slice(0, 4);
+    let socialLinks = links.slice(4);
+
 </script>
 
 <head>
@@ -40,7 +64,7 @@
 
 <div class="flex items-center justify-center p-4 sm:p-20 md:p-40 min-h-screen">
 
-    <div class="fixed top-0 left-0 right-0 flex items-center justify-center z-10 bg-background">
+    <div class="fixed bottom-0 left-0 right-0 flex items-center justify-center z-10 bg-background/80 backdrop-blur-sm py-2">
         <Dock
           let:magnification
           let:distance
@@ -48,48 +72,20 @@
           magnification={60}
           distance={110}
           direction="bottom"
+          class="max-w-fit"
         >
-          <DockIcon
-            {magnification}
-            {distance}
-            {mouseX}
-            
-            class="bg-black/10 dark:bg-white/5 p-3"
-          >
-          <a href="/" aria-label="Home">
-            <i class="fa-solid fa-house text-xl"></i>
-          </a>
-          </DockIcon>
-          <DockIcon
-            {magnification}
-            {distance}
-            {mouseX}
-            class="bg-black/10 dark:bg-white/5 p-3"
-          >
-          <a href="/about" aria-label="aboutme">
-            <i class="fa-solid fa-address-card text-xl"></i>
-          </a>
-          </DockIcon>
-          <DockIcon
-            {magnification}
-            {distance}
-            {mouseX}
-            class="bg-black/10 dark:bg-white/5 p-3"
-          >
-          <a href="/projects" aria-label="projects">
-            <i class="fa-solid fa-briefcase text-xl"></i>
-          </a>
-          </DockIcon>
-          <DockIcon
-            {magnification}
-            {distance}
-            {mouseX}
-            class="bg-black/10 dark:bg-white/5 p-3"
-          >
-          <a href="https://edition.cnn.com/interactive/2019/06/us/dad-joke-generator-trnd/" aria-label="jokes">
-            <i class="fa-solid fa-face-laugh-wink text-xl"></i>
-          </a>
-          </DockIcon>
+          {#each navLinks as link}
+            <DockIcon
+              {magnification}
+              {distance}
+              {mouseX}
+              class="bg-black/10 dark:bg-amber-50 dark:opacity-45 p-3"
+            >
+              <a href={link.href} aria-label={link.text}>
+                <i class="{link.icon_class} text-2xl"></i>
+              </a>
+            </DockIcon>
+          {/each}
         </Dock>
     </div>
 
@@ -102,8 +98,13 @@
         />
 
         <div class="flex justify-center mx-auto space-x-10">
-            {#each links as link}
-                <InteractiveHover text={link.text} icon_class={link.icon_class} class="happy-monkey-regular text-black dark:text-white" href={link.href}/>
+            {#each socialLinks as link}
+                <InteractiveHover 
+                    text={link.text} 
+                    icon_class={link.icon_class} 
+                    class="happy-monkey-regular text-black dark:text-white" 
+                    href={link.href}
+                />
             {/each}
         </div>
         

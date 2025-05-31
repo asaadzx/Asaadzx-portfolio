@@ -3,32 +3,33 @@
     let _class: string = "";
     export { _class as class };
     export let text: string = "Button";
-    export let icon_class: string = "Icon class"
+    export let icon_class = "";
+    let icon = icon_class + " text-2xl"; 
     export let href: string = "#";
-  </script>
+</script>
   
-  <a
+<a
     class={cn(
-      "group relative w-32 cursor-pointer overflow-hidden rounded-full border bg-background p-2 text-center font-semibold",
+      "group relative w-7xl h-12 sm:w-32 cursor-pointer overflow-hidden rounded-full border bg-background p-1.5 sm:p-2 text-center font-semibold",
       _class
     )}
     href={href}
     {...$$restProps}
-  >
+>
     <span
-      class="inline-block translate-x-1 transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-0"
+      class="relative translate-x-1 transition-all duration-300 hidden sm:inline-block group-hover:translate-x-12 group-hover:opacity-0"
     >
       {text}
     </span>
     <div
-      class="absolute top-0 z-10 flex h-full w-full translate-x-12 items-center justify-center gap-2 text-primary-foreground opacity-0 transition-all duration-300 group-hover:-translate-x-1 group-hover:opacity-100"
+      class="absolute top-0 z-10 flex h-full w-full items-center justify-center gap-2 text-primary-foreground sm:translate-x-12 sm:opacity-0 sm:transition-all sm:duration-300 sm:group-hover:-translate-x-1 sm:group-hover:opacity-100"
     >
-      <span>{text}</span>
-      <i class={icon_class}></i>
-      <i class="fa-solid fa-arrow-right"></i>
+      <span class="hidden sm:relative">{text}</span>
+      <i class={icon}></i>
+      <i class="fa-solid fa-arrow-right hidden sm:relative"></i>
     </div>
     <div
-      class="absolute left-[20%] top-[40%] h-2 w-2 scale-[1] rounded-lg bg-primary transition-all duration-300 group-hover:left-[0%] group-hover:top-[0%] group-hover:h-full group-hover:w-full group-hover:scale-[1.8] group-hover:bg-primary"
+      class="absolute left-[20%] top-[40%] h-2 w-7xl scale-[1] rounded-lg bg-primary transition-all duration-300 hidden sm:block group-hover:left-[0%] group-hover:top-[0%] group-hover:h-full group-hover:w-full group-hover:scale-[1.8] group-hover:bg-primary"
     ></div>
-  </a>
+</a>
   
