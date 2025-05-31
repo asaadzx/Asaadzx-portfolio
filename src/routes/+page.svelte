@@ -62,7 +62,7 @@
     <title>Asaad Zein</title>
 </head>
 
-<div class="flex items-center justify-center p-4 sm:p-20 md:p-40 min-h-screen">
+<div class="flex items-center justify-center p-4 sm:p-20 md:p-40 min-h-screen not-dark:bg-amber-600 dark:bg-amber-900">
 
     <div class="fixed bottom-0 left-0 right-0 flex items-center justify-center z-10 bg-background/80 backdrop-blur-sm py-2">
         <Dock
@@ -92,7 +92,7 @@
     <div class="happy-monkey-regular w-full max-w-4xl">
         
         <GradualSpacing
-            class="text-3xl tracking-[-0.1em] h-auto mb-16 text-black dark:text-white sm:text-4xl md:text-7xl md:leading-[5rem]"
+            class="text-3xl tracking-[-0.1em] h-auto mb-16 text-black dark:text-white dark:text-orange-200 sm:text-4xl md:text-7xl md:leading-[5rem]"
             words="Hi There, I am Asaad Zein"
             emojie="👋"
         />
@@ -110,10 +110,10 @@
         
         <SparklesText 
             text="I am a AI Engineer And 3D Artist" 
-            class="text-center text-xl happy-monkey-regular mt-32 text-black dark:text-white sm:text-2xl md:text-7xl md:leading-[5rem]"
+            class="text-center text-xl happy-monkey-regular mt-32 text-black dark:text-orange-100 sm:text-2xl md:text-7xl md:leading-[5rem]"
         />
 
-        <div class="flex justify-center mt-16">
+        <div class="flex justify-center mt-16 not-dark:text-amber-400">
             <CoolMode options={{ particleCount: 5 }}>
                 <RainbowButton>
                     <span>Gallary (Click me)</span>
