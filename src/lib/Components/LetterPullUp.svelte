@@ -3,7 +3,7 @@
   import { AnimatePresence, Motion } from "svelte-motion";
 
   export let words = "Letter Pull Up";
-  export let delay = 0.05;
+  export let delay = 0.12;
   let className: any = "";
   export { className as class };
   let pullupVariant = {
@@ -27,9 +27,9 @@
         custom={i}
         let:motion
       >
-        <h1
+        <h2
           class={cn(
-            "font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-4xl md:leading-[5rem]",
+            "font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-xl md:leading-[5rem]",
             className
           )}
           use:motion
@@ -39,7 +39,7 @@
           {:else}
             {letter}
           {/if}
-        </h1>
+        </h2>
       </Motion>
       {/each}
     <!-- </AnimatePresence> -->

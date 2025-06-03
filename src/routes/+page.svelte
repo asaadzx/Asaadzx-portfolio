@@ -127,11 +127,14 @@
     </BlurFade>
     <section id="header" class="flex flex-col items-center justify-center w-full mb-16">
       <BlurFade delay={0.25}>
-          <h2
+          <LatterPullUp
+          words="Hi There,"
           class="text-3xl font-bold tracking-tighter sm:text-5xl text-black  dark:text-orange-200 mb-9 mt-10 xl:text-6xl/none"
-          >
-          Hi There, I am Asaad Zein
-          </h2>
+          />
+          <LatterPullUp
+          words="I am Asaad Zein"
+          class="text-3xl font-bold tracking-tighter sm:text-5xl text-black  dark:text-orange-200 mb-9 mt-10 xl:text-6xl/none"
+          />
       </BlurFade>
       <BlurFade delay={0.25 * 2}>
           <span
@@ -207,7 +210,7 @@
             (currentGallerySlide =
             (currentGallerySlide - 1 + galleryImages.length) %
             galleryImages.length)}
-          class="absolute opacity-0 group-hover:opacity-100 cursor-pointer transition left-1.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-zinc-950 flex items-center justify-center"
+          class="absolute opacity-40 group-hover:opacity-100 cursor-pointer transition left-1.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-zinc-950 flex items-center justify-center"
           >
           <ChevronLeft class="h-3.5 w-3.5 text-white" />
         </button>
@@ -216,7 +219,7 @@
           onclick={() =>
             (currentGallerySlide =
               (currentGallerySlide + 1) % galleryImages.length)}
-          class="absolute opacity-0 group-hover:opacity-100 cursor-pointer transition right-1.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-zinc-950 flex items-center justify-center"
+          class="absolute opacity-40 group-hover:opacity-100 cursor-pointer transition right-1.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-zinc-950 flex items-center justify-center"
         >
           <ChevronRight class="h-3.5 w-3.5 text-white" />
         </button>

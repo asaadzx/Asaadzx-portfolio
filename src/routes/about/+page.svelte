@@ -1,10 +1,11 @@
-
 <script>
-    // Original imports Svelte Magic UI components
-    import BlurFade from "$lib/Components/BlurFade.svelte";
-    import Dock from "$lib/Components/Dock.svelte";
-    import DockIcon from "$lib/Components/DockIcon.svelte";
-    import LatterPullUp from "$lib/Components/LetterPullUp.svelte";
+  // Original imports Svelte Magic UI components
+  import BlurFade from "$lib/Components/BlurFade.svelte";
+  import Dock from "$lib/Components/Dock.svelte";
+  import DockIcon from "$lib/Components/DockIcon.svelte";
+  import FlickeringGrid from "$lib/Components/FlickeringGrid.svelte";
+  import LatterPullUp from "$lib/Components/LetterPullUp.svelte";
+    
 
     let links = [
     {
@@ -29,28 +30,13 @@
     }
 ];
 
+
 let navLinks = links.slice(0, 4);
 </script>
 
 <div
-class="flex p-4 sm:p-20 md:p-40 min-h-screen not-dark:bg-amber-600 dark:bg-amber-900"
+class="flex p-4 sm:p-20 md:p-40 min-h-screen w-screen max-h-full max-w-full not-dark:bg-amber-600 dark:bg-amber-900"
 >
-<section id="header" class="mx-auto w-full">
-    <BlurFade delay={0.25}>
-        <h2
-        class="text-3xl font-bold tracking-tighter sm:text-5xl text-black  dark:text-orange-200 mb-9 mt-10 xl:text-6xl/none"
-        >
-        Hello World 👋
-        </h2>
-    </BlurFade>
-    <BlurFade delay={0.25 * 2}>
-        <span
-        class="text-black dark:text-orange-200 mb-9 mt-10 text-xl text-pretty tracking-tighter sm:text-3xl xl:text-4xl/none"
-        >
-        Nice to meet you
-        </span>
-    </BlurFade>
-</section>
   <div
     class="fixed bottom-0 left-0 right-0 flex items-center justify-center z-10 bg-background/80 backdrop-blur-sm py-2"
   >
@@ -77,10 +63,28 @@ class="flex p-4 sm:p-20 md:p-40 min-h-screen not-dark:bg-amber-600 dark:bg-amber
       {/each}
     </Dock>
   </div>
-  <div class="happy-monkey-regular flex items-center">
-    <LatterPullUp
-      class="text-black dark:text-white dark:text-orange-200 text-2xl "
-      words="I am Asaad Zein a 14 year old AI Engineer and 3D Artist"
-      />
-    </div>
+  <div class="w-full flex flex-col items-center gap-8">
+    <section id="header" class="z-50 mt-10 text-4xl">
+        <BlurFade delay={0.5}>
+          <div class="happy-monkey-regular text-4xl flex items-center">
+            <LatterPullUp
+              class="text-black dark:text-white dark:text-orange-200 w-full text-2xl sm:text-4xl md:text-3xl"
+              words="About Me (Asaadzx)"
+              />
+            <p class="absolute mt-48 text-2xl dark:text-orange-200">I am 14 Years old Boy </p>
+            </div>
+        </BlurFade>
+    </section>
+
+    <FlickeringGrid
+      class="z-0 [mask:radial-gradient(circle_at_center,#fff_200px,transparent_0)]"
+      squareSize={4}
+      gridGap={6}
+      color="#171B22"
+      maxOpacity={0.5}
+      flickerChance={0.1}
+      height={400}
+      width={250}
+    />
+  </div>
 </div>
