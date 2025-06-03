@@ -4,6 +4,7 @@
   import { Newspaper } from 'lucide-svelte';
 
   // Original imports Svelte Magic UI components
+  import BlurFade from "$lib/Components/BlurFade.svelte";
   import LatterPullUp from "$lib/Components/LetterPullUp.svelte";
   import RainbowButton from "$lib/Components/RainbowButton.svelte";
   import CoolMode from "../lib/Components/CoolMode.svelte";
@@ -108,8 +109,8 @@
       {/each}
     </Dock>
   </div>
-
   <div class="happy-monkey-regular w-full max-w-4xl">
+    <BlurFade delay={0.05 * 1}>
     <div
       class="rounded-lg overflow-hidden p-2 flex items-center justify-center"
     >
@@ -123,12 +124,24 @@
         <div class="text-zinc-500 -mt- text-2xl">@Asaadzx</div>
       </div>
     </div>
-
-    <GradualSpacing
-      class="text-3xl tracking-[-0.1em] h-auto mb-16 text-black dark:text-white dark:text-orange-200 sm:text-lg md:text-3xl md:leading-[5rem]"
-      words="Hi There, I am Asaad Zein"
-      emojie="👋"
-    />
+    </BlurFade>
+    <section id="header" class="flex flex-col items-center justify-center w-full mb-16">
+      <BlurFade delay={0.25}>
+          <h2
+          class="text-3xl font-bold tracking-tighter sm:text-5xl text-black  dark:text-orange-200 mb-9 mt-10 xl:text-6xl/none"
+          >
+          Hi There, I am Asaad Zein
+          </h2>
+      </BlurFade>
+      <BlurFade delay={0.25 * 2}>
+          <span
+          class="text-black dark:text-orange-200 mb-9 mt-10 text-xl text-pretty tracking-tighter sm:text-3xl xl:text-4xl/none"
+          >
+          Nice to meet you 👋
+          </span>
+      </BlurFade>
+    </section>
+    <BlurFade delay={0.05 * 3}>
     <div class="flex justify-center mx-auto space-x-10">
       {#each socialLinks as link}
       <InteractiveHover
@@ -139,13 +152,15 @@
         />
         {/each}
     </div>
-
+    </BlurFade>
+    <BlurFade delay={0.05 * 3}>
     <SparklesText
       text="I am a AI Engineer And 3D Artist"
       class="text-center text-xl happy-monkey-regular mt-32 text-black dark:text-orange-100 sm:text-2xl md:text-7xl md:leading-[5rem]"
     />
-
+    </BlurFade>
     <div class="grid justify-center not-dark:text-amber-400 w-full mt-28">
+      <BlurFade delay={0.05 * 5}>
       <div class="flex justify-center w-full h-40">
         <CoolMode options={{ particleCount: 5 }}>
           <RainbowButton>
@@ -153,6 +168,8 @@
           </RainbowButton>
         </CoolMode>
       </div>
+      </BlurFade>
+      <BlurFade delay={0.05 * 6}>
       <div class="h-[400px] w-[320px] relative group bp">
         <div
         class="absolute inset-0 items-center overflow-hidden rounded-2xl w-full"
@@ -204,7 +221,9 @@
           <ChevronRight class="h-3.5 w-3.5 text-white" />
         </button>
       </div>
+    </BlurFade>
     </div>
+    <BlurFade delay={0.05 * 7}>
     <LatterPullUp
       class="text-black dark:text-white dark:text-orange-200 text-2xl mb-9 mt-10 "
       words="Download MY CV"
@@ -213,5 +232,6 @@
       <div class="absolute inset-0 bg-amber-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
       <Newspaper class="relative z-10"/>
     </button>
+    </BlurFade>
   </div>
 </div>

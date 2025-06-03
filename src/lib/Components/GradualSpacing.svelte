@@ -35,45 +35,10 @@
       }
     }
 
-    function handleTouchStart() {
-      if (!isAnimating) {
-        isAnimating = false;
-        
-        setTimeout(() => {
-          wordsspilit = words.split("");
-          framerProps = {
-            hidden: { 
-              opacity: 0, 
-              x: 0,
-              y: 0,
-              scale: 0.8
-            },
-            visible: { 
-              opacity: 1, 
-              x: 12,
-              y: 0,
-              scale: 1,
-              transition: {
-                type: "spring",
-              }
-            }
-          };
-          
-          // Reset the animation state after all characters have animated
-          setTimeout(() => {
-            isAnimating = false;
-          }, duration * 1000 + wordsspilit.length * delayMultiple * 1000);
-        }, 10);
-      }
-    }
-
+    
     onMount(() => {
       if (container) {
-        container.addEventListener('touchstart', handleTouchStart);
         animateEmoji();
-        return () => {
-          container.removeEventListener('touchstart', handleTouchStart);
-        };
       }
     });
 </script>
@@ -81,8 +46,8 @@
 <div 
   bind:this={container}
   class="flex justify-center space-x-[0.05rem] cursor-pointer touch-manipulation select-none max-w-fit mx-auto"
-  on:touchstart={handleTouchStart}
-  on:keydown={(e) => e.key === 'Enter' && handleTouchStart()}
+  on:touchstart={animateEmoji}
+  on:keydown={(e) => e.key === 'Enter' && animateEmoji()}
   role="button"
   tabindex="0"
 >
@@ -108,7 +73,7 @@
         </span>
       </Motion>
     {/each}
-    <h1 bind:this={emojiElement} class="text-lg w-2 sm:text-xl md:text-2xl inline-block">{emojie}</h1>
+    <span bind:this={emojiElement} class="text-sm w-2 sm:text-lg md:text-lg inline-block">{emojie}</span>
   </AnimatePresence>
 </div>
 
