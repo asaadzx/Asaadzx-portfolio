@@ -125,7 +125,7 @@
     </div>
 
     <GradualSpacing
-      class="text-3xl tracking-[-0.1em] h-auto mb-16 text-black dark:text-white dark:text-orange-200 sm:text-4xl md:text-7xl md:leading-[5rem]"
+      class="text-3xl tracking-[-0.1em] h-auto mb-16 text-black dark:text-white dark:text-orange-200 sm:text-lg md:text-3xl md:leading-[5rem]"
       words="Hi There, I am Asaad Zein"
       emojie="👋"
     />
@@ -209,9 +209,9 @@
       class="text-black dark:text-white dark:text-orange-200 text-2xl mb-9 mt-10 "
       words="Download MY CV"
       />
-    <button onclick={openCV} aria-label="Download CV" class="mx-auto flex items-center justify-center group px-4 py-2 bg-amber-800 text-white rounded-lg relative overflow-hidden cursor-pointer">
+    <button onclick={openCV} aria-label="Download CV" class="mx-auto flex items-center justify-center group px-4 py-2 bg-amber-800 text-white rounded-lg relative overflow-hidden cursor-pointer mb-48">
       <div class="absolute inset-0 bg-amber-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-      <Newspaper class="relative z-10" />
+      <Newspaper class="relative z-10"/>
     </button>
   </div>
 </div>

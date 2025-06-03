@@ -26,7 +26,7 @@
     function animateEmoji() {
       if (emojiElement) {
         gsap.to(emojiElement, {
-          rotation: 20,
+          rotation: 15,
           duration: 0.9,
           ease: "power1.inOut",
           yoyo: true,
