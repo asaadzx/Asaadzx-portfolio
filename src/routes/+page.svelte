@@ -1,8 +1,10 @@
 <script>
-  // Imports
+  // Imports Coastal UI
   import { ChevronLeft, ChevronRight } from "lucide-svelte";
+  import { Newspaper } from 'lucide-svelte';
 
   // Original imports Svelte Magic UI components
+  import LatterPullUp from "$lib/Components/LetterPullUp.svelte";
   import RainbowButton from "$lib/Components/RainbowButton.svelte";
   import CoolMode from "../lib/Components/CoolMode.svelte";
   import GradualSpacing from "../lib/Components/GradualSpacing.svelte";
@@ -10,6 +12,12 @@
   import SparklesText from "../lib/Components/SparklesText.svelte";
   import Dock from "$lib/Components/Dock.svelte";
   import DockIcon from "$lib/Components/DockIcon.svelte";
+
+  
+  function openCV() {
+    window.open("Asaad Resume.pdf", "_blank");
+  }
+
 
   let currentGallerySlide = $state(0);
 
@@ -121,16 +129,15 @@
       words="Hi There, I am Asaad Zein"
       emojie="👋"
     />
-
     <div class="flex justify-center mx-auto space-x-10">
       {#each socialLinks as link}
-        <InteractiveHover
-          text={link.text}
-          icon_class={link.icon_class}
+      <InteractiveHover
+      text={link.text}
+      icon_class={link.icon_class}
           class="happy-monkey-regular text-black dark:text-white"
           href={link.href}
         />
-      {/each}
+        {/each}
     </div>
 
     <SparklesText
@@ -148,15 +155,15 @@
       </div>
       <div class="h-[400px] w-[320px] relative group bp">
         <div
-          class="absolute inset-0 items-center overflow-hidden rounded-2xl w-full"
+        class="absolute inset-0 items-center overflow-hidden rounded-2xl w-full"
         >
-          <div
-            class="flex transition-transform duration-400 ease-in-out h-full w-full"
-            style="transform: translateX(-{currentGallerySlide * 100}%)"
+        <div
+        class="flex transition-transform duration-400 ease-in-out h-full w-full"
+        style="transform: translateX(-{currentGallerySlide * 100}%)"
           >
-            {#each galleryImages as image}
+          {#each galleryImages as image}
               <img
-                src={image}
+              src={image}
                 aria-hidden="true"
                 class="h-full w-full min-w-full object-cover"
                 alt="Gallery Image"
@@ -164,27 +171,27 @@
             {/each}
           </div>
         </div>
-
+        
         <div
           class="absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center space-x-2"
         >
           {#each galleryImages as _, i}
-            <div
-              class="w-1.5 h-1.5 rounded-full transition-all {currentGallerySlide ===
+          <div
+          class="w-1.5 h-1.5 rounded-full transition-all {currentGallerySlide ===
               i
                 ? 'bg-white'
                 : 'bg-zinc-300 scale-75'}"
             ></div>
-          {/each}
-        </div>
-
-        <button
+            {/each}
+          </div>
+          
+          <button
           onclick={() =>
             (currentGallerySlide =
-              (currentGallerySlide - 1 + galleryImages.length) %
-              galleryImages.length)}
+            (currentGallerySlide - 1 + galleryImages.length) %
+            galleryImages.length)}
           class="absolute opacity-0 group-hover:opacity-100 cursor-pointer transition left-1.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-zinc-950 flex items-center justify-center"
-        >
+          >
           <ChevronLeft class="h-3.5 w-3.5 text-white" />
         </button>
 
@@ -198,5 +205,13 @@
         </button>
       </div>
     </div>
+    <LatterPullUp
+      class="text-black dark:text-white dark:text-orange-200 text-2xl mb-9 mt-10 "
+      words="Download MY CV"
+      />
+    <button onclick={openCV} aria-label="Download CV" class="mx-auto flex items-center justify-center group px-4 py-2 bg-amber-800 text-white rounded-lg relative overflow-hidden cursor-pointer">
+      <div class="absolute inset-0 bg-amber-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+      <Newspaper class="relative z-10" />
+    </button>
   </div>
 </div>
