@@ -6,6 +6,7 @@
     export let icon_class = "";
     let icon = icon_class + " text-2xl"; 
     export let href: string = "#";
+    export let onClick: (() => void) | null = null;
 </script>
   
 <a
@@ -14,6 +15,7 @@
       _class
     )}
     href={href}
+    on:click|preventDefault={() => { if (onClick) onClick(); }}
     {...$$restProps}
 >
     <span

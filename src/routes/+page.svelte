@@ -5,6 +5,7 @@
 
   // Original imports Svelte Magic UI components
   import BlurFade from "$lib/Components/BlurFade.svelte";
+  import SmoothCursor from "$lib/Components/SmoothCursor.svelte"
   import LatterPullUp from "$lib/Components/LetterPullUp.svelte";
   import RainbowButton from "$lib/Components/RainbowButton.svelte";
   import CoolMode from "../lib/Components/CoolMode.svelte";
@@ -234,7 +235,7 @@
       <button
         onclick={openCV}
         aria-label="Download CV"
-        class="mx-auto flex items-center justify-center group px-4 py-2 bg-amber-800 text-white rounded-lg relative overflow-hidden cursor-pointer mb-48"
+        class="mx-auto flex items-center justify-center group px-4 py-2 bg-amber-800 text-white rounded-lg relative overflow-hidden cursor-pointer"
       >
         <div
           class="absolute inset-0 bg-amber-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300"
@@ -242,5 +243,53 @@
         <Newspaper class="relative z-10" />
       </button>
     </BlurFade>
+      <form
+        action="https://formspree.io/f/mldnkejy"
+        method="POST"
+        class="backdrop-blur-lg bg-white/20 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-2xl shadow-xl p-8 max-w-lg mx-auto mt-20 flex flex-col gap-6 happy-monkey-regular"
+      >
+      <BlurFade delay={0.05 * 8}>
+        <h2 class="text-3xl font-bold text-center text-black dark:text-orange-200 mb-2 tracking-tight">Contact Me</h2>
+        <label class="flex flex-col gap-2 text-lg text-black dark:text-orange-100">
+          Your Name:
+          <input
+            type="text"
+            name="name"
+            required
+            class="px-4 py-2 rounded-lg bg-white/60 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all text-black dark:text-orange-100 placeholder:text-amber-400"
+            placeholder="Your name"
+          />
+        </label>
+      </BlurFade>
+      <BlurFade delay={0.05 * 8}>
+        <label class="flex flex-col gap-2 text-lg text-black dark:text-orange-100">
+          Your email:
+          <input
+            type="email"
+            name="email"
+            required
+            class="px-4 py-2 rounded-lg bg-white/60 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all text-black dark:text-orange-100 placeholder:text-amber-400"
+            placeholder="you@email.com"
+          />
+        </label>
+        <label class="flex flex-col gap-2 text-lg text-black dark:text-orange-100">
+          Your message:
+          <textarea
+            name="message"
+            required
+            rows="4"
+            class="px-4 py-2 rounded-lg bg-white/60 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all text-black dark:text-orange-100 placeholder:text-amber-400 resize-none"
+            placeholder="Type your message..."
+          ></textarea>
+        </label>
+      </BlurFade>
+        <button
+          type="submit"
+          class="mt-4 px-6 py-2 rounded-lg bg-amber-700 hover:bg-amber-800 text-white font-semibold shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2"
+        >
+          Send
+        </button>
+      </form>
+    <SmoothCursor></SmoothCursor>
   </div>
 </div>

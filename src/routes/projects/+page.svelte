@@ -58,13 +58,13 @@ let projects = [
     {
         name: "Epmail",
         description: "A Gmail client built with Tauri.",
-        language: "CSS",
+        language: "Rust, JS",
         url: "https://github.com/asaadzx/Epmail"
     },
     {
         name: "Zenshell",
         description: "A C++ based shell with Lua plugins.",
-        language: "Makefile",
+        language: "Makefile, C++, Lua",
         url: "https://github.com/GhostFreakOS/Zenshell"
     }
 ];
