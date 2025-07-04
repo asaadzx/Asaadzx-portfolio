@@ -5,7 +5,7 @@
   import DockIcon from "$lib/Components/DockIcon.svelte";
   import FlickeringGrid from "$lib/Components/FlickeringGrid.svelte";
   import LatterPullUp from "$lib/Components/LetterPullUp.svelte";
-    
+  import SmoothCursor from "$lib/Components/SmoothCursor.svelte";
 
     let links = [
     {
@@ -42,7 +42,9 @@ let interests = [
     'Artificial Intelligence and Machine Learning',
     'Full Stack Web Development',
     'Cross-platform Mobile Applications',
-    'Open Source Contributions'
+    'Open Source Contributions',
+    '3D Art',
+    'Origami'
 ];
 </script>
 
@@ -132,15 +134,6 @@ class="flex p-4 sm:p-20 md:p-40 min-h-screen w-screen max-h-full max-w-full not-
         </BlurFade>
     </section>
 
-    <FlickeringGrid
-      class="z-0 [mask:radial-gradient(circle_at_center,#fff_200px,transparent_0)]"
-      squareSize={4}
-      gridGap={6}
-      color="#171B22"
-      maxOpacity={0.5}
-      flickerChance={0.1}
-      height={400}
-      width={250}
-    />
   </div>
+  <SmoothCursor></SmoothCursor>
 </div>

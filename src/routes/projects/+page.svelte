@@ -4,7 +4,7 @@
   import Dock from "$lib/Components/Dock.svelte";
   import DockIcon from "$lib/Components/DockIcon.svelte";
   import LatterPullUp from "$lib/Components/LetterPullUp.svelte";
-    
+  import SmoothCursor from "$lib/Components/SmoothCursor.svelte";
     let links = [
     {
       text: "Home",
@@ -123,5 +123,5 @@ class="flex flex-col items-center p-4 sm:p-8 md:p-12 min-h-screen w-full max-h-f
       </BlurFade>
     {/each}
   </section>
-
+  <SmoothCursor></SmoothCursor>
 </div>

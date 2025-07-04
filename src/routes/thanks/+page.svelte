@@ -25,11 +25,11 @@
 <section class="flex flex-col items-center justify-center w-full mt-20 mb-16">
 <LatterPullUp
 words="Thank You!"
-class="text-3xl font-bold tracking-tighter sm:text-5xl text-black dark:text-orange-200 mb-9 mt-10 xl:text-6xl/none"
+class="text-3xl font-bold tracking-tighter happy-monkey-regular sm:text-5xl text-black dark:text-orange-200 mb-9 mt-10 xl:text-6xl/none"
 />
 <BlurFade delay={0.25 * 2}>
 <span
-  class="text-black dark:text-orange-200 mb-9 mt-10 text-xl text-pretty tracking-tighter sm:text-3xl xl:text-4xl/none text-center"
+  class="text-black dark:text-orange-200 mb-9 mt-10 text-xl happy-monkey-regular tracking-tighter sm:text-3xl xl:text-4xl/none text-center"
 >
   For contacting me! 🎉
 </span>
@@ -70,8 +70,8 @@ class="text-center text-xl happy-monkey-regular mt-16 text-black dark:text-orang
 <BlurFade delay={0.05 * 13}>
 <div class="text-center mt-16 mb-20">
 <LatterPullUp
-words="Made with ❤️ by Asaad"
-class="text-2xl font-bold tracking-tighter text-black dark:text-orange-200"
+words="Made with ❤️ by Asaad Zein"
+class="text-2xl font-bold tracking-tighter text-black dark:text-orange-200 happy-monkey-regular"
 />
 </div>
 </BlurFade>

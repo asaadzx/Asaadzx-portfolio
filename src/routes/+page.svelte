@@ -285,6 +285,7 @@
       </BlurFade>
         <button
           type="submit"
+          onclick={() => window.location.href = '/thanks'}
           class="mt-4 px-6 py-2 rounded-lg bg-amber-700 hover:bg-amber-800 text-white font-semibold shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2"
         >
           Send
