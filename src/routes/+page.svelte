@@ -246,7 +246,7 @@
       <form
         action="https://formspree.io/f/mldnkejy"
         method="POST"
-        class="backdrop-blur-lg bg-white/20 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-2xl shadow-xl p-8 max-w-lg mx-auto mt-20 flex flex-col gap-6 happy-monkey-regular"
+        class="backdrop-blur-lg bg-white/20 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-2xl shadow-xl p-8 max-w-lg mx-auto mt-20 flex flex-col gap-6 happy-monkey-regular mb-36"
       >
       <BlurFade delay={0.05 * 8}>
         <h2 class="text-3xl font-bold text-center text-black dark:text-orange-200 mb-2 tracking-tight">Contact Me</h2>

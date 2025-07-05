@@ -66,6 +66,12 @@ let projects = [
         description: "A C++ based shell with Lua plugins.",
         language: "Makefile, C++, Lua",
         url: "https://github.com/GhostFreakOS/Zenshell"
+    },
+    {
+        name: "GhostFreak OS",
+        description: "A Linux Distro based on arch linux",
+        language: "Linux, C++, Bash ",
+        url: "https://github.com/GhostFreakOS"
     }
 ];
 
