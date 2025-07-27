@@ -1,10 +1,10 @@
 {
 	"name": "asaadzx",
 	"version": "0.0.1",
-	"packageManager": "bun@latest",
+	"packageManager": "bun@latest", 
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build && npm run prepack",
+		"build": "svelte-kit sync && vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"prepack": "svelte-kit sync && svelte-package && publint",
