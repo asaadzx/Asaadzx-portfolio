@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
     {
-        "command": "export PATH='$PATH:/home/asaad/.bun/bin' && bun run dev --open",
+        "command": "bun run dev --open",
         "name": "Run Start Dev",
         "request": "launch",
         "type": "node-terminal"

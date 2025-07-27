@@ -13,6 +13,13 @@
   import SparklesText from "../lib/Components/SparklesText.svelte";
   import Dock from "$lib/Components/Dock.svelte";
   import DockIcon from "$lib/Components/DockIcon.svelte";
+  
+  let { data } = $props();
+  
+  let firstMessage = data.messages.find((post) => post.id === 1)?.Massage;
+  let SecondMessage = data.messages.find((post) => post.id === 2)?.Massage;
+  let ThirdMessage = data.messages.find((post) => post.id === 3)?.Massage;
+  let FirstEmbed = data.messages.find((post) => post.id === 3)?.Embeded_things;
 
   function openCV() {
     window.open("Asaad Resume.pdf", "_blank");
@@ -159,7 +166,7 @@
     </BlurFade>
     <BlurFade delay={0.05 * 3}>
       <SparklesText
-        text="I am a AI Engineer And 3D Artist"
+        text="I am AI Engineer And 3D Artist"
         class="text-center text-xl happy-monkey-regular mt-32 text-black dark:text-orange-100 sm:text-2xl md:text-7xl md:leading-[5rem]"
       />
     </BlurFade>
@@ -291,6 +298,26 @@
           Send
         </button>
       </form>
+    <BlurFade delay={0.05 * 9} class="mb-30">
+      <SparklesText
+        text="MY REALTIME MESSAGES"
+        class="text-center text-2xl happy-monkey-regular mt-32 text-black dark:text-orange-100 sm:text-3xl md:text-7xl md:leading-[5rem]"
+      />
+      <div class="flex flex-col items-center gap-4 mt-8">
+        <h3 class="text-4xl text-black dark:text-orange-200">What is the Event That I am in right Now ✨</h3>
+        <div class="text-2xl text-black dark:text-orange-200">
+          {firstMessage}
+        </div>
+        <h3 class="text-5xl text-black dark:text-orange-200">What I want to Say 🗣️</h3>
+        <div class="text-2xl text-black dark:text-orange-200">
+          {SecondMessage}
+        </div>
+        <h3 class="text-5xl text-black dark:text-orange-200">{ThirdMessage}</h3>
+        <div class="text-2xl text-black dark:text-orange-200">
+          {@html FirstEmbed}
+        </div>
+      </div>
+    </BlurFade>
     <SmoothCursor></SmoothCursor>
   </div>
 </div>
