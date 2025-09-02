@@ -80,45 +80,19 @@ let projects = [
 <div
 class="flex flex-col items-center p-4 sm:p-8 md:p-12 min-h-screen w-full max-h-full max-w-full not-dark:bg-amber-600 dark:bg-amber-900"
 >
-  <div
-    class="fixed bottom-0 left-0 right-0 flex items-center justify-center z-10 bg-background/80 backdrop-blur-sm py-2"
-  >
-    <Dock
-      let:magnification
-      let:distance
-      let:mouseX
-      magnification={60}
-      distance={110}
-      direction="bottom"
-      class="max-w-fit"
-    >
-      {#each navLinks as link}
-        <DockIcon
-          {magnification}
-          {distance}
-          {mouseX}
-          class="bg-black/10 dark:bg-amber-50 dark:opacity-45 p-3"
-        >
-          <a href={link.href} aria-label={link.text}>
-            <i class="{link.icon_class} text-2xl"></i>
-          </a>
-        </DockIcon>
-      {/each}
-    </Dock>
-  </div>
 
-  <section id="header" class="z-50 mt-10 text-4xl text-center">
+<section id="header" class="z-50 mt-10 text-4xl text-center">
     <BlurFade delay={0.25}>
       <LatterPullUp
-        class="text-black dark:text-white dark:text-orange-200 w-full text-3xl sm:text-4xl md:text-5xl"
-        words="My Cool Projects"
+      class="text-black dark:text-white dark:text-orange-200 w-full text-3xl sm:text-4xl md:text-5xl"
+      words="My Cool Projects"
       />
     </BlurFade>
   </section>
-
+  
   <section class="z-50 mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl p-14">
     {#each projects as project, i}
-      <BlurFade delay={0.35 + i * 0.1}>
+    <BlurFade delay={0.35 + i * 0.1}>
         <a href={project.url} target="_blank" rel="noopener noreferrer" class="block h-full">
           <div class="bg-white/20 dark:bg-black/30 p-6 rounded-lg shadow-lg h-full flex flex-col hover:bg-white/30 dark:hover:bg-black/40 transition-colors duration-300">
             <h3 class="text-xl font-bold dark:text-orange-200 mb-2">{project.name}</h3>
@@ -127,7 +101,33 @@ class="flex flex-col items-center p-4 sm:p-8 md:p-12 min-h-screen w-full max-h-f
           </div>
         </a>
       </BlurFade>
-    {/each}
-  </section>
-  <SmoothCursor></SmoothCursor>
-</div>
+      {/each}
+    </section>
+    <div
+      class="fixed bottom-0 left-0 right-0 flex items-center justify-center z-10 bg-background/80 backdrop-blur-sm py-2"
+    >
+      <Dock
+        let:magnification
+        let:distance
+        let:mouseX
+        magnification={60}
+        distance={110}
+        direction="bottom"
+        class="max-w-fit"
+      >
+        {#each navLinks as link}
+          <DockIcon
+            {magnification}
+            {distance}
+            {mouseX}
+            class="bg-black/10 dark:bg-amber-50 dark:opacity-45 p-3"
+          >
+            <a href={link.href} aria-label={link.text}>
+              <i class="{link.icon_class} text-2xl"></i>
+            </a>
+          </DockIcon>
+        {/each}
+      </Dock>
+    </div>
+    <SmoothCursor></SmoothCursor>
+  </div>
