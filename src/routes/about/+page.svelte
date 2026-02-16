@@ -22,11 +22,6 @@
       text: "Projects",
       icon_class: "fa-solid fa-briefcase",
       href: "/projects",
-    },
-    {
-      text: "Jokes",
-      icon_class: "fa-solid fa-face-laugh-wink",
-      href: "https://edition.cnn.com/interactive/2019/06/us/dad-joke-generator-trnd/",
     }
 ];
 
@@ -35,7 +30,8 @@ let navLinks = links.slice(0, 4);
 
 let technologies = [
     'Linux', 'Bash', 'Python', 'Flutter', 'C++', 'HTML5', 'CSS3', 'JavaScript', 
-    'Deno', 'Fresh', 'PyTorch', 'GitHub', 'Android', 'VSCode', 'Godot', 'MySQL'
+    'Deno', 'Fresh', 'PyTorch', 'GitHub', 'Android', 'VSCode', 'Godot', 'MySQL',
+    'blender', 'SQLite', 'Docker', 'Kubernetes', 'TensorFlow', 'OpenCV', 'React', 'Node.js',
 ];
 
 let interests = [
@@ -66,7 +62,7 @@ class="flex p-4 sm:p-20 md:p-40 min-h-screen w-screen max-h-full max-w-full not-
         <section class="z-50 text-center max-w-3xl">
           <BlurFade delay={0.7}>
             <p class="text-lg text-black dark:text-orange-200">
-              I'm a 14-year-old passionate open-source developer and tech enthusiast from Egypt. 
+              I'm a 15-year-old passionate open-source developer and tech enthusiast from Egypt. 
               My journey is driven by curiosity and a desire to create meaningful solutions through open-source development. 
               I specialize in machine learning, web technologies, and mobile development, constantly exploring new tools and frameworks to expand my skills.
             </p>
@@ -95,7 +91,7 @@ class="flex p-4 sm:p-20 md:p-40 min-h-screen w-screen max-h-full max-w-full not-
           </BlurFade>
     </section>
     
-    <section class="z-50 text-center">
+    <section class="z-50 text-center mb-30">
       <BlurFade delay={1.1}>
             <h2 class="text-3xl font-bold dark:text-white mb-4">My Interests</h2>
             <ul class="text-lg dark:text-orange-200 text-left inline-block">

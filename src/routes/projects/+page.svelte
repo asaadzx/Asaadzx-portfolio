@@ -20,11 +20,6 @@
       text: "Projects",
       icon_class: "fa-solid fa-briefcase",
       href: "/projects",
-    },
-    {
-      text: "Jokes",
-      icon_class: "fa-solid fa-face-laugh-wink",
-      href: "https://edition.cnn.com/interactive/2019/06/us/dad-joke-generator-trnd/",
     }
 ];
 
@@ -72,7 +67,23 @@ let projects = [
         description: "A Linux Distro based on arch linux",
         language: "Linux, C++, Bash ",
         url: "https://github.com/GhostFreakOS"
+    },
+    {
+        name: "Anas Ibn Malik School Website",
+        description: "A website for Anas Ibn Malik School built with SvelteKit.",
+        language: "React, Tailwind CSS ,PostgreSQL",
+        url: "https://anas-ibn-malik-school.vercel.app/"
+    },
+    {
+        name: "Epyac Enhanced Model",
+        description: "An enhanced version of Epyac AI with improved performance and features for Everyday students use on there mid Laptops.",
+        language: "Python ,PyTorch, Transformers, ONNX, Ollama",
+        url: "https://epyac-enhanced.vercel.app/"
     }
+    
+    
+    
+
 ];
 
 </script>
@@ -90,7 +101,7 @@ class="flex flex-col items-center p-4 sm:p-8 md:p-12 min-h-screen w-full max-h-f
     </BlurFade>
   </section>
   
-  <section class="z-50 mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl p-14">
+  <section class="z-50 mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl p-14 mb-30">
     {#each projects as project, i}
     <BlurFade delay={0.35 + i * 0.1}>
         <a href={project.url} target="_blank" rel="noopener noreferrer" class="block h-full">

@@ -22,15 +22,23 @@
   let FirstEmbed = data.messages.find((post) => post.id === 3)?.Embeded_things;
 
   function openCV() {
-    window.open("Asaad Resume.pdf", "_blank");
+    window.open("Asaad Zein Sayed Resume.pdf", "_blank");
   }
 
   let currentGallerySlide = $state(0);
 
   const galleryImages = [
-    "images/dIo_qrgq.jpg",
-    "images/fJoRbhJR.jpg",
-    "images/💖 (@twaniimals) on X.jpg",
+    "images/p-1.jpg",
+    "images/p-2.jpg",
+    "images/p-3.jpg",
+    "images/p-4.jpg",
+    "images/p-5.jpg",
+    "images/p-6.jpg",
+    "images/p-7.jpg",
+    "images/p-8.jpg",
+    "images/p-9.jpg",
+    "images/p-10.jpg",
+    "images/p-11.jpg",
   ];
 
   let links = [
@@ -50,11 +58,6 @@
       href: "/projects",
     },
     {
-      text: "Jokes",
-      icon_class: "fa-solid fa-face-laugh-wink",
-      href: "https://edition.cnn.com/interactive/2019/06/us/dad-joke-generator-trnd/",
-    },
-    {
       text: "Contact Me",
       icon_class: "fa-solid fa-envelope",
       href: "mailto:asaad.work2010@gmail.com",
@@ -63,6 +66,11 @@
       icon_class: "fa-brands fa-github",
       text: "Github",
       href: "https://github.com/asaadzx",
+    },
+    {
+      icon_class: "fa-brands fa-github",
+      text: "Github 2",
+      href: "https://github.com/asaad-fly",
     },
     {
       icon_class: "fa-brands fa-square-x-twitter",
@@ -74,6 +82,11 @@
       text: "Linked in",
       href: "https://linkedin.com/in/asaad-zx",
     },
+    {
+      text: "Contact Me",
+      icon_class: "fa-solid fa-envelope",
+      href: "mailto:asaad.work2010@gmail.com",
+    }
   ];
 
   // Separate navigation and social links
@@ -166,7 +179,7 @@
     </BlurFade>
     <BlurFade delay={0.05 * 3}>
       <SparklesText
-        text="I am AI Engineer And 3D Artist"
+        text="I am a Developer And 3D Artist"
         class="text-center text-xl happy-monkey-regular mt-32 text-black dark:text-orange-100 sm:text-2xl md:text-7xl md:leading-[5rem]"
       />
     </BlurFade>
