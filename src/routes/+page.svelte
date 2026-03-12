@@ -28,17 +28,17 @@
   let currentGallerySlide = $state(0);
 
   const galleryImages = [
-    "images/p-1.jpg",
-    "images/p-2.jpg",
-    "images/p-3.jpg",
-    "images/p-4.jpg",
-    "images/p-5.jpg",
-    "images/p-6.jpg",
-    "images/p-7.jpg",
-    "images/p-8.jpg",
-    "images/p-9.jpg",
-    "images/p-10.jpg",
-    "images/p-11.jpg",
+    "images/p1.webp",
+    "images/p2.webp",
+    "images/p3.webp",
+    "images/p4.webp",
+    "images/p5.webp",
+    "images/p6.webp",
+    "images/p7.webp",
+    "images/p-8.webp",
+    "images/p-9.webp",
+    "images/p-10.webp",
+    "images/p11.webp",
   ];
 
   let links = [
@@ -128,7 +128,7 @@
     </Dock>
   </div>
   <div class="happy-monkey-regular w-full max-w-4xl">
-    <BlurFade delay={0.05 * 1}>
+    <BlurFade delay={0.03 * 1}>
       <div
         class="rounded-lg overflow-hidden p-2 flex items-center justify-center"
       >
@@ -147,7 +147,7 @@
       id="header"
       class="flex flex-col items-center justify-center w-full mb-16"
     >
-      <BlurFade delay={0.25}>
+      <BlurFade delay={0.15}>
         <LatterPullUp
           words="Hi There,"
           class="text-3xl font-bold tracking-tighter sm:text-5xl text-black  dark:text-orange-200 mb-9 mt-10 xl:text-6xl/none"
@@ -157,7 +157,7 @@
           class="text-3xl font-bold tracking-tighter sm:text-5xl text-black  dark:text-orange-200 mb-9 mt-10 xl:text-6xl/none"
         />
       </BlurFade>
-      <BlurFade delay={0.25 * 2}>
+      <BlurFade delay={0.15 * 2}>
         <span
           class="text-black dark:text-orange-200 mb-9 mt-10 text-xl text-pretty tracking-tighter sm:text-3xl xl:text-4xl/none"
         >
@@ -165,7 +165,7 @@
         </span>
       </BlurFade>
     </section>
-    <BlurFade delay={0.05 * 3}>
+    <BlurFade delay={0.03 * 3}>
       <div class="flex justify-center mx-auto space-x-10">
         {#each socialLinks as link}
           <InteractiveHover
@@ -177,14 +177,14 @@
         {/each}
       </div>
     </BlurFade>
-    <BlurFade delay={0.05 * 3}>
+    <BlurFade delay={0.03 * 3}>
       <SparklesText
         text="I am a Developer And 3D Artist"
         class="text-center text-xl happy-monkey-regular mt-32 text-black dark:text-orange-100 sm:text-2xl md:text-7xl md:leading-[5rem]"
       />
     </BlurFade>
     <div class="grid justify-center not-dark:text-amber-400 w-full mt-28">
-      <BlurFade delay={0.05 * 5}>
+      <BlurFade delay={0.03 * 5}>
         <div class="flex justify-center w-full h-40">
           <CoolMode options={{ particleCount: 5 }}>
             <RainbowButton>
@@ -193,7 +193,7 @@
           </CoolMode>
         </div>
       </BlurFade>
-      <BlurFade delay={0.05 * 6}>
+      <BlurFade delay={0.03 * 6}>
         <div class="h-[400px] w-[320px] relative group bp">
           <div
             class="absolute inset-0 items-center overflow-hidden rounded-2xl w-full"
@@ -206,6 +206,7 @@
                 <img
                   src={image}
                   aria-hidden="true"
+                  loading="lazy"
                   class="h-full w-full min-w-full object-cover"
                   alt="Gallery Image"
                 />
@@ -247,7 +248,7 @@
         </div>
       </BlurFade>
     </div>
-    <BlurFade delay={0.05 * 7}>
+    <BlurFade delay={0.03 * 7}>
       <LatterPullUp
         class="text-black dark:text-white dark:text-orange-200 text-2xl mb-9 mt-10 "
         words="Download MY CV"
@@ -268,7 +269,7 @@
         method="POST"
         class="backdrop-blur-lg bg-white/20 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-2xl shadow-xl p-8 max-w-lg mx-auto mt-20 flex flex-col gap-6 happy-monkey-regular mb-36"
       >
-      <BlurFade delay={0.05 * 8}>
+      <BlurFade delay={0.03 * 8}>
         <h2 class="text-3xl font-bold text-center text-black dark:text-orange-200 mb-2 tracking-tight">Contact Me</h2>
         <label class="flex flex-col gap-2 text-lg text-black dark:text-orange-100">
           Your Name:
@@ -281,7 +282,7 @@
           />
         </label>
       </BlurFade>
-      <BlurFade delay={0.05 * 8}>
+      <BlurFade delay={0.03 * 8}>
         <label class="flex flex-col gap-2 text-lg text-black dark:text-orange-100">
           Your email:
           <input
@@ -311,7 +312,7 @@
           Send
         </button>
       </form>
-    <BlurFade delay={0.05 * 9} class="mb-30">
+    <BlurFade delay={0.03 * 9} class="mb-30">
       <SparklesText
         text="MY REALTIME MESSAGES"
         class="text-center text-2xl happy-monkey-regular mt-32 text-black dark:text-orange-100 sm:text-3xl md:text-7xl md:leading-[5rem]"

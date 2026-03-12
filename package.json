@@ -1,7 +1,7 @@
 {
 	"name": "asaadzx",
 	"version": "0.0.1",
-	"packageManager": "bun@latest", 
+	"packageManager": "bun@latest",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "svelte-kit sync && vite build",
@@ -54,15 +54,19 @@
 		"@lucide/svelte": "^0.511.0",
 		"@supabase/supabase-js": "^2.52.0",
 		"@vercel/analytics": "^1.5.0",
+		"@vitejs/plugin-react": "^5.1.4",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
 		"flowbite-svelte": "^1.5.0",
 		"gsap": "^3.13.0",
 		"lucide": "^0.511.0",
 		"lucide-svelte": "^0.511.0",
+		"sharp": "^0.34.5",
 		"svelte-inview": "^4.0.4",
 		"svelte-motion": "^0.12.2",
+		"svgo": "^4.0.1",
 		"tailwind-merge": "^3.3.0",
-		"vercel": "^44.6.3"
+		"vercel": "^44.6.3",
+		"vite-plugin-image-optimizer": "^2.0.3"
 	}
 }
