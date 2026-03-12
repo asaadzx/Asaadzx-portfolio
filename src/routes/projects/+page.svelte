@@ -5,6 +5,11 @@
   import DockIcon from "$lib/Components/DockIcon.svelte";
   import LatterPullUp from "$lib/Components/LetterPullUp.svelte";
   import SmoothCursor from "$lib/Components/SmoothCursor.svelte";
+  import SEOHead from "$lib/Components/SEOHead.svelte";
+
+  // @ts-ignore
+  let { data } = $props();
+
     let links = [
     {
       text: "Home",
@@ -87,6 +92,10 @@ let projects = [
 ];
 
 </script>
+
+<SEOHead seo={data.seo} pageType="projects" />
+
+<SmoothCursor />
 
 <div
 class="flex flex-col items-center p-4 sm:p-8 md:p-12 min-h-screen w-full max-h-full max-w-full not-dark:bg-amber-600 dark:bg-amber-900"

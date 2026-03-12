@@ -5,6 +5,10 @@
   import DockIcon from "$lib/Components/DockIcon.svelte";
   import LatterPullUp from "$lib/Components/LetterPullUp.svelte";
   import SmoothCursor from "$lib/Components/SmoothCursor.svelte";
+  import SEOHead from "$lib/Components/SEOHead.svelte";
+
+  // @ts-ignore
+  let { data } = $props();
 
     let links = [
     {
@@ -42,6 +46,9 @@ let interests = [
     'Origami'
 ];
 </script>
+
+<SEOHead seo={data.seo} pageType="about" />
+<SmoothCursor />
 
 <div
 class="flex p-4 sm:p-20 md:p-40 min-h-screen w-screen max-h-full max-w-full not-dark:bg-amber-600 dark:bg-amber-900"

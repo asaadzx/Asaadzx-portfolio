@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
   // Imports Coastal UI
   // @ts-ignore
   import { ChevronLeft, ChevronRight } from "lucide-svelte";
@@ -15,6 +17,7 @@
   import SparklesText from "../lib/Components/SparklesText.svelte";
   import Dock from "$lib/Components/Dock.svelte";
   import DockIcon from "$lib/Components/DockIcon.svelte";
+  import SEOHead from "$lib/Components/SEOHead.svelte";
   
   let { data } = $props();
   
@@ -96,9 +99,8 @@
   let socialLinks = links.slice(4);
 </script>
 
-<head>
-  <title>Asaad Zein</title>
-</head>
+<SmoothCursor />
+<SEOHead seo={data.seo} pageType="home" />
 
 <div
   class="flex items-center justify-center p-4 sm:p-20 md:p-40 min-h-screen not-dark:bg-amber-600 dark:bg-amber-900"

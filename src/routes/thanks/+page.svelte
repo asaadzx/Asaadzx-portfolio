@@ -1,5 +1,4 @@
 <script>
-  import { CheckIcon, ChevronRightIcon } from "lucide-svelte";
   import { goto } from '$app/navigation';
 
   import BlurFade from "$lib/Components/BlurFade.svelte";
@@ -7,6 +6,10 @@
   import SparklesText from "$lib/Components/SparklesText.svelte";
   import AnimatedButton from "$lib/Components/AnimatedButton.svelte";
   import SmoothCursor from "$lib/Components/SmoothCursor.svelte";
+  import SEOHead from "$lib/Components/SEOHead.svelte";
+
+  // @ts-ignore
+  let { data } = $props();
 
   function delayedGoHome() {
     setTimeout(() => {
@@ -15,7 +18,10 @@
   }
 </script>
 
+<SEOHead seo={data.seo} pageType="thanks" />
 
+
+<SmoothCursor />
 
 
 
@@ -54,12 +60,14 @@ class="text-center text-xl happy-monkey-regular mt-16 text-black dark:text-orang
 >
   <span slot="initialText" class="group inline-flex items-center">
     <span>Back to Home</span>
-    <ChevronRightIcon
+    <span
       class="ml-1 mt-0.5 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-    />
+    >
+      →
+    </span>
   </span>
   <span slot="changeText" class="group inline-flex items-center">
-    <CheckIcon class="mr-2 mt-0.5 h-4 w-4" />
+    <span class="mr-2 mt-0.5 h-4 w-4">✓</span>
     Thank You{" "}
   </span>
 </AnimatedButton>
