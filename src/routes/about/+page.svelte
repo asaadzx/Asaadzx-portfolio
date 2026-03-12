@@ -3,7 +3,6 @@
   import BlurFade from "$lib/Components/BlurFade.svelte";
   import Dock from "$lib/Components/Dock.svelte";
   import DockIcon from "$lib/Components/DockIcon.svelte";
-  import FlickeringGrid from "$lib/Components/FlickeringGrid.svelte";
   import LatterPullUp from "$lib/Components/LetterPullUp.svelte";
   import SmoothCursor from "$lib/Components/SmoothCursor.svelte";
 
@@ -49,10 +48,10 @@ class="flex p-4 sm:p-20 md:p-40 min-h-screen w-screen max-h-full max-w-full not-
 >
 <div class="w-full flex flex-col items-center gap-8 px-4">
   <section id="header" class="z-50 mt-10 text-4xl text-center">
-    <BlurFade delay={0.5}>
+    <BlurFade delay={0.2}>
           <div class="happy-monkey-regular text-4xl flex flex-col items-center">
             <LatterPullUp
-            class="text-black dark:text-white dark:text-orange-200 w-full text-3xl sm:text-4xl md:text-5xl"
+            class="text-black dark:text-orange-200 w-full text-3xl sm:text-4xl md:text-5xl"
             words="About Me (Asaadzx)"
             />
             </div>
@@ -60,7 +59,7 @@ class="flex p-4 sm:p-20 md:p-40 min-h-screen w-screen max-h-full max-w-full not-
         </section>
 
         <section class="z-50 text-center max-w-3xl">
-          <BlurFade delay={0.7}>
+          <BlurFade delay={0.3}>
             <p class="text-lg text-black dark:text-orange-200">
               I'm a 15-year-old passionate open-source developer and tech enthusiast from Egypt. 
               My journey is driven by curiosity and a desire to create meaningful solutions through open-source development. 
@@ -70,7 +69,7 @@ class="flex p-4 sm:p-20 md:p-40 min-h-screen w-screen max-h-full max-w-full not-
       </section>
       
       <section class="z-50 text-center">
-        <BlurFade delay={0.8}>
+        <BlurFade delay={0.4}>
           <h2 class="text-2xl font-bold dark:text-white mb-2">Current Status</h2>
           <p class="text-lg text-black dark:text-orange-200">
             I am currently in Preparatory 3 in school.
@@ -79,7 +78,7 @@ class="flex p-4 sm:p-20 md:p-40 min-h-screen w-screen max-h-full max-w-full not-
         </section>
         
         <section class="z-50 text-center">
-          <BlurFade delay={0.9}>
+          <BlurFade delay={0.4}>
             <h2 class="text-3xl font-bold dark:text-white mb-4">Technologies & Skills</h2>
             <div class="flex flex-wrap justify-center gap-2">
               {#each technologies as tech}
@@ -92,7 +91,7 @@ class="flex p-4 sm:p-20 md:p-40 min-h-screen w-screen max-h-full max-w-full not-
     </section>
     
     <section class="z-50 text-center mb-30">
-      <BlurFade delay={1.1}>
+      <BlurFade delay={0.2}>
             <h2 class="text-3xl font-bold dark:text-white mb-4">My Interests</h2>
             <ul class="text-lg dark:text-orange-200 text-left inline-block">
               {#each interests as interest}
@@ -106,7 +105,7 @@ class="flex p-4 sm:p-20 md:p-40 min-h-screen w-screen max-h-full max-w-full not-
     
   </div>
   <div
-    class="fixed bottom-0 left-0 right-0 flex items-center justify-center z-10 bg-background/80 backdrop-blur-sm py-2"
+    class="fixed bottom-0 left-0 right-0 flex items-center justify-center z-50 bg-background/80 backdrop-blur-sm py-2"
   >
     <Dock
       let:magnification

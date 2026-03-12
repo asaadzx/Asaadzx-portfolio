@@ -1,6 +1,8 @@
 <script>
   // Imports Coastal UI
+  // @ts-ignore
   import { ChevronLeft, ChevronRight } from "lucide-svelte";
+  // @ts-ignore
   import { Newspaper } from "lucide-svelte";
 
   // Original imports Svelte Magic UI components
@@ -28,8 +30,8 @@
   let currentGallerySlide = $state(0);
 
   const galleryImages = [
-    "images/p1.webp",
     "images/p2.webp",
+    "images/p1.webp",
     "images/p3.webp",
     "images/p4.webp",
     "images/p5.webp",
@@ -128,7 +130,7 @@
     </Dock>
   </div>
   <div class="happy-monkey-regular w-full max-w-4xl">
-    <BlurFade delay={0.03 * 1}>
+    <BlurFade delay={0.02 * 1}>
       <div
         class="rounded-lg overflow-hidden p-2 flex items-center justify-center"
       >
@@ -147,7 +149,7 @@
       id="header"
       class="flex flex-col items-center justify-center w-full mb-16"
     >
-      <BlurFade delay={0.15}>
+      <BlurFade delay={0.05}>
         <LatterPullUp
           words="Hi There,"
           class="text-3xl font-bold tracking-tighter sm:text-5xl text-black  dark:text-orange-200 mb-9 mt-10 xl:text-6xl/none"
@@ -157,7 +159,7 @@
           class="text-3xl font-bold tracking-tighter sm:text-5xl text-black  dark:text-orange-200 mb-9 mt-10 xl:text-6xl/none"
         />
       </BlurFade>
-      <BlurFade delay={0.15 * 2}>
+      <BlurFade delay={0.15 * 1}>
         <span
           class="text-black dark:text-orange-200 mb-9 mt-10 text-xl text-pretty tracking-tighter sm:text-3xl xl:text-4xl/none"
         >
@@ -186,9 +188,9 @@
     <div class="grid justify-center not-dark:text-amber-400 w-full mt-28">
       <BlurFade delay={0.03 * 5}>
         <div class="flex justify-center w-full h-40">
-          <CoolMode options={{ particleCount: 5 }}>
+          <CoolMode options={{ particleCount: 3 }}>
             <RainbowButton>
-              <span>Gallary (Click me)</span>
+              <span>Have Fun 😹 (Click me)</span>
             </RainbowButton>
           </CoolMode>
         </div>
@@ -250,7 +252,7 @@
     </div>
     <BlurFade delay={0.03 * 7}>
       <LatterPullUp
-        class="text-black dark:text-white dark:text-orange-200 text-2xl mb-9 mt-10 "
+        class="text-black dark:text-orange-200 text-2xl mb-9 mt-10 "
         words="Download MY CV"
       />
       <button
@@ -318,7 +320,7 @@
         class="text-center text-2xl happy-monkey-regular mt-32 text-black dark:text-orange-100 sm:text-3xl md:text-7xl md:leading-[5rem]"
       />
       <div class="flex flex-col items-center gap-4 mt-8">
-        <h3 class="text-4xl text-black dark:text-orange-200">What is the Event That I am in right Now ✨</h3>
+        <h3 class="text-4xl text-black dark:text-orange-200">What is the Messages I want to say right Now ✨</h3>
         <div class="text-2xl text-black dark:text-orange-200">
           {firstMessage}
         </div>

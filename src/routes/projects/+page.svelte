@@ -93,9 +93,9 @@ class="flex flex-col items-center p-4 sm:p-8 md:p-12 min-h-screen w-full max-h-f
 >
 
 <section id="header" class="z-50 mt-10 text-4xl text-center">
-    <BlurFade delay={0.25}>
+    <BlurFade delay={0.15}>
       <LatterPullUp
-      class="text-black dark:text-white dark:text-orange-200 w-full text-3xl sm:text-4xl md:text-5xl"
+      class="text-black dark:text-orange-200 w-full text-3xl sm:text-4xl md:text-5xl"
       words="My Cool Projects"
       />
     </BlurFade>
@@ -103,7 +103,7 @@ class="flex flex-col items-center p-4 sm:p-8 md:p-12 min-h-screen w-full max-h-f
   
   <section class="z-50 mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl p-14 mb-30">
     {#each projects as project, i}
-    <BlurFade delay={0.35 + i * 0.1}>
+    <BlurFade delay={0.15 + i * 0.1}>
         <a href={project.url} target="_blank" rel="noopener noreferrer" class="block h-full">
           <div class="bg-white/20 dark:bg-black/30 p-6 rounded-lg shadow-lg h-full flex flex-col hover:bg-white/30 dark:hover:bg-black/40 transition-colors duration-300">
             <h3 class="text-xl font-bold dark:text-orange-200 mb-2">{project.name}</h3>
@@ -115,7 +115,7 @@ class="flex flex-col items-center p-4 sm:p-8 md:p-12 min-h-screen w-full max-h-f
       {/each}
     </section>
     <div
-      class="fixed bottom-0 left-0 right-0 flex items-center justify-center z-10 bg-background/80 backdrop-blur-sm py-2"
+      class="fixed bottom-0 left-0 right-0 flex items-center justify-center z-50 bg-background/80 backdrop-blur-sm py-2"
     >
       <Dock
         let:magnification
