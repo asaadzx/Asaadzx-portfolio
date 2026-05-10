@@ -88,9 +88,9 @@
       href: "https://linkedin.com/in/asaad-zx",
     },
     {
-      text: "Contact Me",
-      icon_class: "fa-solid fa-envelope",
-      href: "mailto:asaad.work2010@gmail.com",
+      icon_class: "fa-solid fa-mug-hot",
+      text: "Support Me",
+      href: "https://buymeacoffee.com/asaadzx",
     }
   ];
 
