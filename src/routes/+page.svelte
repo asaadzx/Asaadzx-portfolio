@@ -33,17 +33,16 @@
   let currentGallerySlide = $state(0);
 
   const galleryImages = [
-    "images/p2.webp",
     "images/p1.webp",
-    "images/p3.webp",
-    "images/p4.webp",
-    "images/p5.webp",
-    "images/p6.webp",
-    "images/p7.webp",
-    "images/p-8.webp",
-    "images/p-9.webp",
-    "images/p-10.webp",
-    "images/p11.webp",
+    "images/p2.jpg",
+    "images/p3.jpg",
+    "images/p4.jpg",
+    "images/p5.jpg",
+    "images/p6.jpg",
+    "images/p7.jpg",
+    "images/p8.webp",
+    "images/p9.webp",
+    "images/p10.webp",
   ];
 
   let links = [
@@ -238,7 +237,7 @@
                 galleryImages.length)}
             class="absolute opacity-40 group-hover:opacity-100 cursor-pointer transition left-1.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-zinc-950 flex items-center justify-center"
           >
-            <ChevronLeft class="h-3.5 w-3.5 text-white" />
+            <ChevronLeft class="h-4.5 w-3.5 text-white" />
           </button>
 
           <button

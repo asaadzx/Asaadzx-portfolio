@@ -183,6 +183,10 @@
 </div>
 
 <style>
+  :global(body, body *) {
+    cursor: none !important;
+  }
+
   :global(.cursor) {
     position: fixed;
     top: 0;
