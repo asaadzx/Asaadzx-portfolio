@@ -34,7 +34,7 @@
       <SparklesText
         text={status?.toString() || "404"}
         class="text-8xl md:text-9xl font-bold text-text mb-8"
-        colors={{ first: "#873adf", second: "#e458aa" }}
+        colors={{ first: "#869ce9", second: "#213169" }}
         sparklesCount={15}
       />
     </BlurFade>
@@ -79,8 +79,8 @@
       <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
         <CoolMode options={{ particleCount: 8 }}>
           <AnimatedButton
-            buttonColor="#873adf"
-            buttonTextColor="#ffffff"
+            buttonColor="#213169"
+            buttonTextColor="#f4f6fb"
             subscribeStatus={false}
             on:click={goHome}
           >
@@ -97,8 +97,8 @@
 
         <CoolMode options={{ particleCount: 6 }}>
           <AnimatedButton
-            buttonColor="#e458aa"
-            buttonTextColor="#ffffff"
+            buttonColor="#162b79"
+            buttonTextColor="#f4f6fb"
             subscribeStatus={false}
             on:click={goBack}
           >
