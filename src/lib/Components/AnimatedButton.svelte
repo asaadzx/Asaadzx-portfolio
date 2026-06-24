@@ -30,7 +30,7 @@
         <Motion initial={{ y: -50 }} animate={{ y: 0 }} let:motion>
           <span
             use:motion
-            class="relative block h-full w-full font-semibold text-white dark:text-black"
+            class="relative block h-full w-full font-semibold text-text"
           >
             <slot name="changeText">Subscribed</slot>
           </span>

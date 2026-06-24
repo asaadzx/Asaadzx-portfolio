@@ -1,17 +1,43 @@
 @import "tailwindcss";
-@plugin '@tailwindcss/forms';
-@plugin '@tailwindcss/typography';
 
-.happy-monkey-regular {
-  font-family: "Happy Monkey", system-ui;
-  font-weight: 400;
-  font-style: normal;
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-heading: 'IM Fell English', serif;
+  --font-body: 'IM Fell English', serif;
+
+  --text-sm: 0.750rem;
+  --text-base: 1rem;
+  --text-xl: 1.333rem;
+  --text-2xl: 1.777rem;
+  --text-3xl: 2.369rem;
+  --text-4xl: 3.158rem;
+  --text-5xl: 4.210rem;
+
+  --color-text: #090b15;
+  --color-background: #f4f6fb;
+  --color-primary: #c1c4cd;
+  --color-secondary: #869ce9;
+  --color-accent: #213169;
 }
 
-:root {
-  --color-1: 0 100% 63%;
-  --color-2: 270 100% 63%;
-  --color-3: 210 100% 63%;
-  --color-4: 195 100% 63%;
-  --color-5: 90 100% 63%;
+.dark {
+  --color-text: #eaecf6;
+  --color-background: #04060b;
+  --color-primary: #32353e;
+  --color-secondary: #162b79;
+  --color-accent: #96a6de;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+.dark .fa-solid,
+.dark .fa-brands,
+.dark .fa-regular,
+.dark .fa-sharp {
+  color: #fff;
 }

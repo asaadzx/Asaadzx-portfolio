@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { Motion, AnimatePresence, useAnimation } from "svelte-motion";
+  import { Motion, AnimatePresence } from "svelte-motion";
   import { inview } from "svelte-inview";
   import { cn } from "../utils.js";
-  export let duration = 0.4;
+  export let duration = 0.2;
   export let delay = 0;
   export let yOffset = 6;
   export let inViewMargin = "-50px";
@@ -35,7 +35,7 @@
     <div
       use:inview={{ rootMargin: inViewMargin, unobserveOnEnter: once }}
       use:motion
-      on:inview_change={({ detail }) => {
+      on:inview_change={({ detail }: { detail: { inView: boolean } }) => {
         isInView = detail.inView ? "visible" : "hidden";
       }}
       class={cn(className)}

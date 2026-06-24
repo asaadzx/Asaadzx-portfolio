@@ -22,7 +22,7 @@
     export { className as class };
   
     let sparkles: Sparkle[] = [];
-    import { onMount, onDestroy, tick } from "svelte";
+    import { onMount, onDestroy } from "svelte";
   
     let generateStar = () => {
       let starX = `${Math.random() * 100}%`;
