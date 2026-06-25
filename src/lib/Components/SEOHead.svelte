@@ -5,10 +5,9 @@
 
   interface Props {
     seo: SEOMetadata;
-    pageType?: string;
   }
 
-  let { seo, pageType = 'home' }: Props = $props();
+  let { seo }: Props = $props();
 
   const personSchema = generatePersonSchema();
   const webPageSchema = generateWebPageSchema(seo);
@@ -23,10 +22,6 @@
 
   {#if seo.keywords?.length}
     <meta name="keywords" content={seo.keywords.join(', ')} />
-  {/if}
-
-  {#if seo.canonical}
-    <link rel="canonical" href={seo.canonical} />
   {/if}
 
   <meta property="og:type" content="website" />
@@ -44,7 +39,6 @@
   <meta name="twitter:creator" content={siteConfig.seo.twitterHandle} />
 
   <link rel="canonical" href={seo.canonical || siteConfig.seo.canonical} />
-
   <meta name="robots" content="index, follow" />
   <meta name="language" content="English" />
   <meta property="og:locale" content="en_US" />

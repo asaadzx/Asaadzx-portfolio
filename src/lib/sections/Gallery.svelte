@@ -17,7 +17,7 @@
     />
   </BlurFade>
 
-  <BlurFade delay={0.03 * 6}>
+  <BlurFade delay={0.18}>
       <div class="h-[250px] sm:h-[400px] w-full relative group">
       <div class="absolute inset-0 items-center overflow-hidden rounded-2xl w-full">
         <div

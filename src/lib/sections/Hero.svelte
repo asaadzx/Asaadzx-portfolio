@@ -1,5 +1,6 @@
 <script lang="ts">
     // @ts-nocheck
+    import { base } from "$app/paths";
     import BlurFade from "$lib/Components/BlurFade.svelte";
     import LetterPullUp from "$lib/Components/LetterPullUp.svelte";
     import InteractiveHover from "$lib/Components/InteractiveHover.svelte";
@@ -8,13 +9,13 @@
 </script>
 
 <section id="hero">
-    <BlurFade delay={0.02 * 1}>
+    <BlurFade delay={0.02}>
         <div
             class="rounded-lg overflow-hidden p-2 flex items-center justify-center"
         >
             {#if siteConfig.avatarUrl}
                 <img
-                    src={siteConfig.avatarUrl}
+                    src={base + siteConfig.avatarUrl}
                     alt={siteConfig.name}
                     class="h-44 w-44 rounded-full object-cover"
                 />
@@ -39,7 +40,7 @@
                 class="text-3xl font-bold tracking-tighter sm:text-5xl text-text mb-4 mt-6 sm:mb-9 sm:mt-10 xl:text-6xl/none"
             />
         </BlurFade>
-        <BlurFade delay={0.15 * 1}>
+        <BlurFade delay={0.15}>
             <span
                 class="text-text mb-4 mt-6 sm:mb-9 sm:mt-10 text-xl text-pretty tracking-tighter sm:text-3xl xl:text-4xl/none"
             >
@@ -48,7 +49,7 @@
         </BlurFade>
     </section>
 
-    <BlurFade delay={0.03 * 3}>
+    <BlurFade delay={0.09}>
         <div class="flex justify-center mx-auto space-x-10 flex-wrap gap-y-4">
             {#each siteConfig.socialLinks as link}
                 <InteractiveHover
@@ -63,7 +64,7 @@
         </div>
     </BlurFade>
 
-    <BlurFade delay={0.03 * 3}>
+    <BlurFade delay={0.09}>
         <SparklesText
             text={siteConfig.title}
             class="text-center text-xl mt-16 sm:mt-32 text-text sm:text-2xl md:text-7xl md:leading-[5rem]"

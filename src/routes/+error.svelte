@@ -7,12 +7,12 @@
 
   import BlurFade from "$lib/Components/BlurFade.svelte";
   import LetterPullUp from "$lib/Components/LetterPullUp.svelte";
-  import CoolMode from "../lib/Components/CoolMode.svelte";
-  import InteractiveHover from "../lib/Components/InteractiveHover.svelte";
-  import SparklesText from "../lib/Components/SparklesText.svelte";
+  import CoolMode from "$lib/Components/CoolMode.svelte";
+  import InteractiveHover from "$lib/Components/InteractiveHover.svelte";
+  import SparklesText from "$lib/Components/SparklesText.svelte";
   import AnimatedButton from "$lib/Components/AnimatedButton.svelte";
 
-  import { siteConfig } from "$lib/config";
+  import { siteConfig } from "$lib/config.js";
 
   function goHome() {
     setTimeout(() => { goto(base || '/'); }, 800);
