@@ -53,11 +53,12 @@
 
         {#if project.tags.length > 0}
             <BlurFade delay={0.25}>
-                <div class="flex flex-wrap gap-2 mb-8 text-lg">
+                <div class="flex flex-wrap gap-3 mb-8">
                     {#each project.tags as tag}
                         <span
-                            class="bg-primary/10 dark:bg-primary/20 text-text px-3 py-1 rounded-full text-sm"
+                            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm border border-primary/30 text-text/70 hover:text-text hover:border-primary hover:bg-primary/5 transition-all duration-300"
                         >
+                            <i class="fa-solid fa-tag text-[10px] opacity-60"></i>
                             {tag}
                         </span>
                     {/each}
@@ -67,17 +68,17 @@
 
         {#if project.links.length > 0}
             <BlurFade delay={0.3}>
-                <div class="flex flex-wrap gap-4 text-2xl">
+                <div class="flex flex-wrap gap-4">
                     {#each project.links as link}
                         <a
                             href={link.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="inline-flex items-center gap-2 rounded-2xl hover:bg-accent text-text font-semibold text-sm transition-all shadow-md"
+                            class="group inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-secondary/40 text-text font-semibold text-sm transition-all duration-300 hover:border-secondary hover:bg-secondary/10 hover:scale-105 hover:shadow-lg"
                         >
                             {link.label}
                             <i
-                                class="fa-solid fa-arrow-up-right-from-square text-lg"
+                                class="fa-solid fa-arrow-up-right-from-square text-sm transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                             ></i>
                         </a>
                     {/each}

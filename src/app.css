@@ -14,19 +14,19 @@
   --text-4xl: 3.158rem;
   --text-5xl: 4.210rem;
 
-  --color-text: #090b15;
-  --color-background: #f4f6fb;
-  --color-primary: #c1c4cd;
-  --color-secondary: #869ce9;
-  --color-accent: #213169;
+  --color-text: #1a0415;
+  --color-background: #fdf2f9;
+  --color-primary: #78125d;
+  --color-secondary: #eb9075;
+  --color-accent: #d6b392;
 }
 
 .dark {
-  --color-text: #eaecf6;
-  --color-background: #04060b;
-  --color-primary: #32353e;
-  --color-secondary: #162b79;
-  --color-accent: #96a6de;
+  --color-text: #fbe5f6;
+  --color-background: #0d0209;
+  --color-primary: #ed87d2;
+  --color-secondary: #8a2f14;
+  --color-accent: #dbc0a7;
 }
 
 body {
