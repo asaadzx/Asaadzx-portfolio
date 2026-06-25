@@ -3,41 +3,41 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-heading: 'IM Fell English', serif;
-  --font-body: 'IM Fell English', serif;
+    --font-heading: "IM Fell English", serif;
+    --font-body: "IM Fell English", serif;
 
-  --text-sm: 0.750rem;
-  --text-base: 1rem;
-  --text-xl: 1.333rem;
-  --text-2xl: 1.777rem;
-  --text-3xl: 2.369rem;
-  --text-4xl: 3.158rem;
-  --text-5xl: 4.210rem;
+    --text-sm: 0.75rem;
+    --text-base: 1rem;
+    --text-xl: 1.333rem;
+    --text-2xl: 1.777rem;
+    --text-3xl: 2.369rem;
+    --text-4xl: 3.158rem;
+    --text-5xl: 4.21rem;
 
-  --color-text: #1a0415;
-  --color-background: #fdf2f9;
-  --color-primary: #78125d;
-  --color-secondary: #eb9075;
-  --color-accent: #d6b392;
+    --color-text: #1a0415;
+    --color-background: #fdf2f9;
+    --color-primary: #78125d;
+    --color-secondary: #eb9075;
+    --color-accent: #d6b392;
 }
 
 .dark {
-  --color-text: #fbe5f6;
-  --color-background: #0d0209;
-  --color-primary: #ed87d2;
-  --color-secondary: #8a2f14;
-  --color-accent: #dbc0a7;
+    --color-text: #fbe5f6;
+    --color-background: #0d0209;
+    --color-primary: #ed87d2;
+    --color-secondary: #bc9471;
+    --color-accent: #dbc0a7;
 }
 
 body {
-  font-family: var(--font-body);
-  color: var(--color-text);
-  background-color: var(--color-background);
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
 .dark .fa-solid,
 .dark .fa-brands,
 .dark .fa-regular,
 .dark .fa-sharp {
-  color: #fff;
+    color: #fff;
 }

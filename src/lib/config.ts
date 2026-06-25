@@ -63,7 +63,7 @@ export const siteConfig: SiteConfig = {
   tagline: "Capturing moments in watercolor and ink ✦",
   email: "luna@marchetti.studio",
   location: "Florence, Italy",
-  avatarUrl: "/me.png",
+  avatarUrl: "/pngwing.com.png",
   bio: "I'm a visual artist based in Florence, Italy, where Renaissance light meets rolling Tuscan hills. My work lives at the intersection of traditional watercolor and digital illustration — exploring themes of solitude, nature, and the quiet beauty of everyday moments.",
   skills: [
     { name: "Watercolor", icon: "mdi:palette" },
@@ -143,34 +143,33 @@ export const siteConfig: SiteConfig = {
     {
       label: "Twitter",
       icon: "fa-brands fa-square-x-twitter",
-      url: "https://twitter.com/lunamarchetti",
+      url: "https://twitter.com/good_artist",
     },
     {
       label: "LinkedIn",
       icon: "fa-brands fa-linkedin",
-      url: "https://linkedin.com/in/lunamarchetti",
+      url: "https://linkedin.com/in/good_artist",
     },
   ],
-  cvUrl: "",
+  cvUrl: "https://example.com/cv.pdf",
   theme: {
     dark: true,
   },
 
   seo: {
-    title: "Luna Marchetti — Visual Artist & Illustrator",
+    title: "Good Artist — Visual Artist & Illustrator",
     description:
-      "Portfolio of Luna Marchetti — watercolor, ink, and digital illustration based in Florence, Italy.",
+      "Portfolio of Good Artist — watercolor, ink, and digital illustration.",
     ogImage: "",
-    author: "Luna Marchetti",
+    author: "Good Artist",
     keywords: [
       "art",
       "illustration",
       "watercolor",
-      "florence",
       "portfolio",
       "digital art",
     ],
-    canonical: "https://lunamarchetti.art",
-    twitterHandle: "@lunamarchetti",
+    canonical: "https://goodartist.art",
+    twitterHandle: "@good_artist",
   },
 };

@@ -54,10 +54,15 @@
                     href={siteConfig.cvUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="group inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent hover:bg-secondary text-background font-semibold shadow-md transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                    class="group inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent hover:bg-rose-300 text-background font-semibold shadow-md transition-all duration-300 hover:scale-105 hover:shadow-xl"
                 >
-                    <i class="fa-solid fa-file-lines transition-all duration-300 group-hover:scale-110"></i>
-                    <span class="transition-all duration-300 group-hover:tracking-wider">View CV</span>
+                    <i
+                        class="fa-solid fa-file-lines transition-all duration-300 group-hover:scale-110"
+                    ></i>
+                    <span
+                        class="transition-all duration-300 group-hover:tracking-wider"
+                        >View CV</span
+                    >
                 </a>
             </div>
         </BlurFade>

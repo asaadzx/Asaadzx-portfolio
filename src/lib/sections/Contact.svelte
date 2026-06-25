@@ -15,7 +15,7 @@
         <div class="flex justify-center">
             <a
                 href="mailto:{siteConfig.email}"
-                class="inline-flex items-center gap-2 px-4 sm:px-6 py-3 rounded-lg bg-primary hover:bg-secondary text-text font-semibold shadow-md transition-all duration-200 text-sm sm:text-base"
+                class="inline-flex items-center gap-2 px-4 sm:px-6 py-3 rounded-lg bg-secondary hover:bg-rose-300 text-text font-semibold shadow-md transition-all duration-200 text-sm sm:text-base"
             >
                 <i class="fa-solid fa-envelope"></i>
                 <span class="truncate max-w-[200px] sm:max-w-none"
@@ -30,13 +30,12 @@
     <BlurFade delay={0.3}>
         <p class="text-sm text-text">
             Built with <span class="text-accent">❤</span> using SvelteKit
-            &mdash;
-            <a
-                href="https://github.com/asaadzx/Asaadzx-portfolio"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="hover:text-accent transition-colors"
-            >source</a>
         </p>
+        <a
+            href="https://github.com/asaadzx/Portfolio-Template"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-accent transition-colors text-4xl">source</a
+        >
     </BlurFade>
 </footer>

@@ -56,6 +56,8 @@
                     icon_class={link.icon}
                     class="text-text"
                     href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                 />
             {/each}
         </div>
