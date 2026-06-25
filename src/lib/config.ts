@@ -57,13 +57,13 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: "Luna Marchetti",
-  username: "@lunamarchetti",
+  name: "Good Artist",
+  username: "@good_artist",
   title: "Visual Artist & Illustrator",
   tagline: "Capturing moments in watercolor and ink ✦",
   email: "luna@marchetti.studio",
   location: "Florence, Italy",
-  avatarUrl: "/pngwing.com.png",
+  avatarUrl: "/me.png",
   bio: "I'm a visual artist based in Florence, Italy, where Renaissance light meets rolling Tuscan hills. My work lives at the intersection of traditional watercolor and digital illustration — exploring themes of solitude, nature, and the quiet beauty of everyday moments.",
   skills: [
     { name: "Watercolor", icon: "mdi:palette" },
@@ -138,7 +138,7 @@ export const siteConfig: SiteConfig = {
     {
       label: "Instagram",
       icon: "fa-brands fa-instagram",
-      url: "https://instagram.com/lunamarchetti",
+      url: "https://www.instagram.com/good_artist",
     },
     {
       label: "Twitter",
