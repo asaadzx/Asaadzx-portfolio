@@ -23,7 +23,7 @@
 <button
   onclick={toggle}
   aria-label="Toggle dark mode"
-  class="fixed top-4 right-4 z-50 w-14 h-7 rounded-full cursor-pointer transition-colors duration-300 {isDark ? 'bg-accent' : 'bg-primary/30'} shadow-lg"
+  class="fixed top-4 right-4 z-50 w-14 h-7 rounded-full cursor-pointer transition-colors duration-300 {isDark ? 'bg-accent' : 'bg-primary/30'} shadow-lg hidden sm:block"
 >
   <div
     class="w-5 h-5 rounded-full bg-white shadow-md flex items-center justify-center transition-all duration-300 {isDark ? 'translate-x-8' : 'translate-x-1'}"

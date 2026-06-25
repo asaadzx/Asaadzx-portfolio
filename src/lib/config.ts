@@ -41,6 +41,7 @@ export interface SiteConfig {
   avatarUrl: string;
   bio: string;
   skills: Skill[];
+  cvUrl?: string;
   projects: Project[];
   socialLinks: SocialLink[];
   theme: ThemeConfig;
@@ -148,8 +149,9 @@ export const siteConfig: SiteConfig = {
       url: "https://linkedin.com",
     },
   ],
+  cvUrl: "",
   theme: {
-    dark: false,
+    dark: true,
   },
 
   seo: {

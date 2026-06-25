@@ -47,6 +47,8 @@ export const siteConfig: SiteConfig = {
     // pick any icon from https://iconify.design
   ],
 
+  cvUrl: "/cv.pdf",     // link to your CV/resume; leave "" to hide the button
+
   projects: [
     {
       id: 1,
@@ -173,13 +175,25 @@ Social links use [Font Awesome](https://fontawesome.com) (loaded from CDN in `ap
 
 ### 6. Dark/Light Mode
 
-An animated toggle switch (top-right corner) switches between light and dark mode. The preference is saved in `localStorage`. On first visit, it respects the system `prefers-color-scheme` setting.
+An animated toggle switch (top-right corner, hidden on mobile) switches between light and dark mode. The preference is saved in `localStorage`. On first visit, it respects the system `prefers-color-scheme` setting.
 
 Set the default in `config.ts`:
 
 ```ts
-theme: { dark: false },   // or true
+theme: { dark: true },   // or false
 ```
+
+The toggle is hidden on screens narrower than 640px (`hidden sm:block`). On mobile the theme is always dark by default, so visitors get a consistent viewing experience without an on-screen control.
+
+### 7. CV / Resume Button
+
+Add a CV download link in the My Background section by setting `cvUrl` in `config.ts`:
+
+```ts
+cvUrl: "/cv.pdf",   // path or URL to your CV file
+```
+
+Leave as `""` to hide the button entirely. The button has a hover scale + tracking animation.
 
 ---
 
