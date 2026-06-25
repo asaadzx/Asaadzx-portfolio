@@ -30,6 +30,13 @@
     <BlurFade delay={0.3}>
         <p class="text-sm text-text">
             Built with <span class="text-accent">❤</span> using SvelteKit
+            &mdash;
+            <a
+                href="https://github.com/asaadzx/Asaadzx-portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-accent transition-colors"
+            >source</a>
         </p>
     </BlurFade>
 </footer>
